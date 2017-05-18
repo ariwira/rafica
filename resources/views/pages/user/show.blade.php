@@ -1,0 +1,11 @@
+@extends('layouts.app')
+@section('content')
+    <table>
+        <td>
+            <tr>{{$user->name}}</tr>
+            <tr>{{$user->username}}</tr>
+            <tr>{{$user->email}}</tr>
+            <tr>{{$user->jabatan}}</tr>
+        </td>
+    </table>
+@endsection
