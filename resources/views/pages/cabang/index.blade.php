@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.index')
 @section('content')
     <a href="{{route('cabang.create')}}" class="btn btn-primary">Create Cabang</a>
     <table>

@@ -15,7 +15,6 @@ class CreateCabangTable extends Migration
     {
         Schema::create('cabang', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
             $table->string('nama');
         });
     }

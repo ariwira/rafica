@@ -28,11 +28,4 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    public function cabang(){
-        return $this->hasOne('App\Cabang');
-    }
-    public function data(){
-        return $this->hasOne('App\Data');
-    }
 }

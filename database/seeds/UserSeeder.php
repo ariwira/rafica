@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
         $superadmin->save();
 
         $faker = Faker\Factory::create();
-        $limit = 10;
+        $limit = 21;
         for ($i = 0; $i < $limit; $i++) {
             User::create([
                'name' => $faker->firstNameMale,
@@ -37,7 +37,7 @@ class UserSeeder extends Seeder
         $super->attachRole(1);
         $super->save();
 
-        for ($i = 2;$i<=11;$i++){
+        for ($i = 2;$i<=22;$i++){
             $user = User::find($i);
             $user->attachRole(2);
             $user->save();

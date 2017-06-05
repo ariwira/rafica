@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.index')
 @section('content')
     <a href="{{route('user.create')}}" class="btn btn-primary">Create account</a>
     <table>
