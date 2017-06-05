@@ -17,19 +17,7 @@ class CabangRepo extends BaseRepo
         $this->model = Cabang::class;
     }
 
-    public function getOneByUserId($userId)
-    {
-        try{
-            $cabang = Cabang::where('user_id','=',$userId)
-                ->first();
-            if (empty($cabang)){
-                throw new \Exception('not found');
-            }
-            return $cabang;
-        }catch (\Exception $exception){
-            throw $exception;
-        }
-    }
+
 //    public function getAll(){
 //        try{
 //            return Cabang::all();

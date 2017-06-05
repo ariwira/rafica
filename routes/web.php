@@ -31,6 +31,8 @@ Route::group(['middleware' => 'auth'],function (){
     Route::group(['middleware' => 'role:admin'],function () {
         Route::resource('/cabang','CabangController');
         Route::resource('/user','UserController');
+        Route::resource('/input','DataInputController');
+        Route::resource('/inputData', 'CrudController');
     });
     Route::group(['middleware' => 'role:user'],function () {
         Route::resource('/input','DataInputController');

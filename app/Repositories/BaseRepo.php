@@ -14,10 +14,15 @@ use App\Data;
 class BaseRepo
 {
     protected $model;
-    public function getAll(){
+    public function getAll($limit = 0){
         try{
             $instance = $this->model;
-            return $instance::all();
+            if ($limit == 0 ){
+                return $instance::all();
+            }
+                return $instance::limit($limit)->get();
+
+
 //            switch ($instance){
 //                case 'App\User':
 //                    return User::all();

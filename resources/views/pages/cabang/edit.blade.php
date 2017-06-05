@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.index')
 @section('content')
     <form action="{{route('cabang.update',$cabang->id)}}" method="POST">
         {{csrf_field()}}

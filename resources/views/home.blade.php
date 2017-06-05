@@ -1,17 +1,23 @@
-@extends('layouts.app')
-
+@extends('layouts.index')
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+    <!-- Navbar goes here -->
+    <div class="section">
+        <div class="card-panel purple darken-3 white-text">Welcome To Rafica, {{ Auth::user()->name }}.</div>
+    <!-- Page Layout here -->
+        <div class="col s3 center-align">
+            @role('admin')
+            <!-- admin -->
+                <button class="waves-effect waves-light btn"><a class="white-text" href="{{ route('input.index') }}">View Data</a></button>
+                <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 50px;">
 
-                <div class="panel-body">
-                    You are logged in!
-                </div>
+                    <a href="{{ route('input.create') }}" class="btn-floating btn-large red">
+                        <i class="large material-icons">add</i>
+                    </a>
+            @endrole
+            @role('user')
+            &nbsp;<!-- user -->
+            @endrole
             </div>
         </div>
     </div>
-</div>
-@endsection
+    @endsection

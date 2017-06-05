@@ -34,4 +34,18 @@ class DataInputRepo extends BaseRepo
             throw $exception;
         }
     }
+
+    public function attach($id,$data)
+    {
+        try{
+            $input = DataInput::find($id);
+            if (empty($input)){
+                throw new \Exception('not found');
+            }
+            $input->cabang()->attach($data);
+            return $input->save();
+        }catch (\Exception $exception){
+            throw $exception;
+        }
+    }
 }

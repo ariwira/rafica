@@ -8,15 +8,11 @@ class Cabang extends Model
 {
     protected  $table = 'cabang';
 
-    protected $fillable = [
-        'user_id', 'nama'
+    protected $fillable = ['nama'
     ];
     public $timestamps = false;
-    public function user(){
-        return $this->belongsTo('App\User', 'user_id');
-    }
     public function data_input(){
-        return $this->hasMany('App\DataInput');
+        return $this->belongsToMany('App\DataInput', 'cabang_input', 'cabang_id', 'input_id');
     }
     public function data(){
         return $this->hasMany('App\Data');
