@@ -13,7 +13,7 @@ class CreateCrudTable extends Migration
      */
     public function up()
     {
-        Schema::create('crud', function (Blueprint $table) {
+        Schema::create('desc', function (Blueprint $table) {
             $table->increments('id');
             $table->string('judul');
             $table->string('tahun');

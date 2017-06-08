@@ -58,7 +58,7 @@
                                 <div class="col-md-6 col-md-offset-4">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="test5" />
+                                            <input type="checkbox" id="test5"/>
                                             <label for="test5">Remember Me</label>
                                         </label>
                                     </div>
@@ -193,14 +193,15 @@
                 </script>
                 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAlhwePUtgGGFH0V85vEog1VSeA7UoOzs&callback=initMap"
                         async defer></script>
-                <div class="row panel-body">
+                <div class="row">
+
                 <h5 class="center-align light brown-text">Plaza Tol Taman Mini Indonesia Indah Jakarta,</h5>
                 <h5 class="center-align light brown-text">13550 Indonesia</h5>
                 <h5 class="center-align light brown-text">Telp +6221 841 3630, 841 3526</h5>
                 <h5  class="center-align light brown-text">Fax. +6221 841 3540</h5> <br>
 
                 <h4>Subscribe to Our News Letter</h4>
-                    <div class="input-field col s7">
+                    <div class="input-field col s6">
                         <i class="material-icons prefix">mode_edit</i>
                         <input id="icon_prefix2" placeholder="Enter Email.." class="email validate"></input>
                         <button class="btn waves-effect waves-light" type="submit" name="action">Submit

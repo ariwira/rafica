@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Crud;
+use App\DataInput;
 use App\Repositories\CabangRepo;
 use App\Repositories\DataInputRepo;
 use App\Repositories\UserRepo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
 
 class DataInputController extends Controller
 {
@@ -28,7 +30,6 @@ class DataInputController extends Controller
     public function index()
     {
         $datas = $this->dataInputRepo->getAll();
-        dd($datas[0]);
         return view('pages.data-input.index',compact('datas'));
     }
 
@@ -102,7 +103,9 @@ class DataInputController extends Controller
      */
     public function show($id)
     {
-        //
+        $tampilkan = DataInput::join('crud','input.crud_id','=','crud.id')
+            ->where('input.id','=',$id)->first();
+        return view('pages.data-input.read',compact('tampilkan'));
     }
 
     /**
